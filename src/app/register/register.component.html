@@ -1,0 +1,73 @@
+<form novalidate #profileForm="ngForm" (ngSubmit)="OnSubmit()" class="row justify-content-md-center">
+  <div class="col-md-8">
+    <div class="form-group row">
+      <label for="email" class="col-2 col-form-label">
+        Email:
+      </label>
+      <div class="col-10">
+        <input [(ngModel)]="user.email" name="email" class="form-control" type="text"
+               id="email" required  minlength="3">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="password" class="col-2 col-form-label">
+        password:
+      </label>
+      <div class="col-10">
+        <input [(ngModel)]="user.password" name="password" class="form-control" type="password"
+               id="password">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="confirmPassword" class="col-2 col-form-label">
+        confirmPassword
+      </label>
+      <div class="col-10">
+        <input [(ngModel)]="user.confirmPassword" name="confirmPassword" class="form-control" type="password"
+               id="confirmPassword">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="country" class="col-2 col-form-label">
+        country
+      </label>
+      <div class="col-10">
+        <input [(ngModel)]="user.country" name="country" class="form-control" type="text" id="country">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for=" Age" class="col-2 col-form-label">
+        Age:
+      </label>
+      <div class="col-10">
+        <input [(ngModel)]="user.age" name="age" class="form-control" type="number" id=" Age">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Gender" class="col-2 col-form-label">
+        Gender:
+      </label>
+      <div class="col-10">
+        <input [(ngModel)]="user.gender" name="gender" class="form-control" type="text"
+               id="Gender">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Phone" class="col-2 col-form-label">
+        Phone:
+      </label>
+      <div class="col-10">
+        <input [(ngModel)]="user.phone" name="phone" class="form-control" type="number"
+               id="Phone">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-10 offset-2">
+        <button class="btn btn-primary"
+                type="submit">Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+<pre>{{ profileForm.controls['email']?.errors | json }}</pre>
